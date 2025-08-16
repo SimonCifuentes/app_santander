@@ -34,8 +34,8 @@ const benefits = [
   },
   {
     icon: CheckCircle,
-    title: "Sin Contratos Ocultos",
-    description: "Transparencia total. Sin arriendos mensuales sorpresa ni letra chica.",
+    title: "Costos de mantención más bajos",
+    description: "0.39 UF + IVA, comisiones más bajas del mercado",
     color: "text-red-600",
     bgColor: "bg-gray-50",
     hoverColor: "hover:bg-gray-100",

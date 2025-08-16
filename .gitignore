@@ -1,5 +1,5 @@
 .next/
-
+.env/
 # Dependencias
 node_modules/
 .pnpm-debug.log*

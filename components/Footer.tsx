@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { MessageCircle, Phone, Mail, Heart } from 'lucide-react'
 
 export default function Footer() {
-  const whatsappLink = "https://wa.me/569XXXXXXXX?text=Hola,%20vengo%20de%20tu%20página%20web%20y%20me%20gustaría%20recibir%20más%20información%20sobre%20las%20máquinas%20de%20pago%20Santander."
+  const whatsappLink = "https://wa.me/56984051873?text=Hola%2C%20vengo%20de%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20m%C3%A1quinas%20de%20pago."
 
   return (
     <footer className="bg-gray-900 text-white py-8 md:py-12 px-4 relative overflow-hidden">
@@ -30,11 +30,11 @@ export default function Footer() {
             <div className="space-y-2 md:space-y-3 text-gray-300">
               <div className="flex items-center gap-2 md:gap-3 justify-center md:justify-start text-sm md:text-base hover:text-white transition-colors duration-300 transform hover:scale-105 animate-slide-in-left">
                 <Phone className="h-4 w-4 animate-pulse" />
-                <span>+56 9 XXXX XXXX</span>
+                <span>+569 8405 1873</span>
               </div>
               <div className="flex items-center gap-2 md:gap-3 justify-center md:justify-start text-sm md:text-base hover:text-white transition-colors duration-300 transform hover:scale-105 animate-slide-in-left delay-100">
                 <Mail className="h-4 w-4 animate-pulse" />
-                <span>contacto@tudominio.cl</span>
+                <span> maquinasdepago.temuco2@gmail.com</span>
               </div>
             </div>
           </div>

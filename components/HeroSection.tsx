@@ -23,7 +23,7 @@ export default function HeroSection() {
   const [isMobile, setIsMobile] = useState(false)
   const [particles, setParticles] = useState<{left: string, top: string, animationDelay: string, animationDuration: string}[]>([])
 
-  const whatsappLink = "https://wa.me/569XXXXXXXX?text=Hola,%20vengo%20de%20tu%20página%20web%20y%20me%20gustaría%20recibir%20más%20información%20sobre%20las%20máquinas%20de%20pago."
+  const whatsappLink = "https://wa.me/56984051873?text=Hola%2C%20vengo%20de%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20m%C3%A1quinas%20de%20pago."
 
   const animatedWords = ["Hoy Mismo", "Sin Demora", "Ahora", "Ya!"]
 
@@ -122,7 +122,7 @@ export default function HeroSection() {
               <div className="absolute -inset-2 bg-gradient-to-r from-white to-yellow-300 rounded-xl blur-md opacity-50 animate-pulse"></div>
               
               <Image
-                src="/modern-store-payment.png"
+                src="/portadaSantander.png"
                 alt="Persona usando máquina de pago Santander"
                 width={600}
                 height={500}

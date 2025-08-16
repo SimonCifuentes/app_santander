@@ -17,20 +17,33 @@ export default function ContactSection() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simular envío
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    setIsSubmitted(true)
-    setIsSubmitting(false)
-    setFormData({ name: '', phone: '', message: '' })
-    
-    // Reset después de 3 segundos
-    setTimeout(() => setIsSubmitted(false), 3000)
+    setError('')
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+
+      if (!res.ok) {
+        throw new Error('Error al enviar el mensaje.')
+      }
+
+      setIsSubmitted(true)
+      setFormData({ name: '', phone: '', message: '' })
+
+      setTimeout(() => setIsSubmitted(false), 3000)
+    } catch (err: any) {
+      setError(err.message || 'Ha ocurrido un error. Intenta nuevamente.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -58,6 +71,7 @@ export default function ContactSection() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {error && <p className="text-red-500 text-sm">{error}</p>}
                   <div className="space-y-2">
                     <label className="block text-sm font-medium">Nombre *</label>
                     <Input
@@ -95,10 +109,10 @@ export default function ContactSection() {
                     className="w-full bg-red-600 hover:bg-red-700 text-lg py-6 transform hover:scale-105 transition-all duration-300"
                   >
                     {isSubmitting ? (
-                      <>
+                      <div className="flex items-center justify-center">
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                         Enviando...
-                      </>
+                      </div>
                     ) : (
                       'Enviar Consulta'
                     )}
