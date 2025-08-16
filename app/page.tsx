@@ -1,4 +1,28 @@
-'use client'
+// app/page.js (Next.js 13 con App Router)
+export const metadata = {
+  title: 'Maquinitas Santander - Pago Fácil',
+  description: 'Compra y conoce nuestras maquinitas Santander, rápidas y seguras para tus pagos.',
+  metadataBase: new URL('https://app-santander-sigma.vercel.app'), // 🔹 agrega esto
+  openGraph: {
+    title: 'Maquinitas Santander - Pago Fácil',
+    description: 'Compra y conoce nuestras maquinitas Santander, rápidas y seguras para tus pagos.',
+    url: '/', // ahora relativa
+    images: [
+      {
+        url: '/portadaSantander.png', // 🔹 usa ruta relativa desde /public
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Maquinitas Santander - Pago Fácil',
+    description: 'Compra y conoce nuestras maquinitas Santander, rápidas y seguras para tus pagos.',
+    images: ['/portadaSantander.png'], // 🔹 igual relativa
+  },
+}
 
 import HeroSection from '@/components/HeroSection'
 import BenefitsSection from '@/components/BenefitsSection'
