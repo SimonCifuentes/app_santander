@@ -24,6 +24,9 @@ html {
   --font-mono: ${GeistMono.variable};
 }
         `}</style>
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.png" />
       </head>
       <body>{children}</body>
     </html>
